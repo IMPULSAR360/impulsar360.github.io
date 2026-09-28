@@ -1,0 +1,58 @@
+:root {
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --text: #1c1c24;
+  --muted: #5d5d6e;
+  --accent: #e8204f;
+  --border: #e4e4ea;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121217;
+    --card: #1b1b22;
+    --text: #ececf1;
+    --muted: #a3a3b3;
+    --accent: #ff4d73;
+    --border: #2c2c36;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+header, main, footer { max-width: 760px; margin: 0 auto; padding: 0 16px; }
+header { padding-top: 24px; display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; justify-content: space-between; }
+.brand { font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none; }
+.brand span { color: var(--accent); }
+nav a { color: var(--muted); text-decoration: none; margin-left: 16px; font-size: .95rem; }
+nav a:first-child { margin-left: 0; }
+nav a:hover, nav a[aria-current] { color: var(--accent); }
+main {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  margin-top: 20px;
+  padding: 28px 22px;
+}
+h1 { font-size: 1.8rem; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 1.2rem; margin: 28px 0 8px; }
+p, li { color: var(--text); }
+ul { padding-left: 20px; }
+a { color: var(--accent); }
+code { font-size: .9em; background: var(--bg); border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }
+.updated { color: var(--muted); font-size: .9rem; margin-top: 0; }
+.lead { font-size: 1.1rem; color: var(--muted); }
+.links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.btn {
+  display: inline-block; padding: 10px 16px; border-radius: 10px;
+  border: 1px solid var(--border); color: var(--text); text-decoration: none; font-weight: 600;
+}
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+footer { color: var(--muted); font-size: .85rem; padding-top: 16px; padding-bottom: 32px; }
+@media (max-width: 480px) {
+  main { padding: 22px 16px; }
+  h1 { font-size: 1.5rem; }
+}
